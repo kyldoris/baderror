@@ -64,6 +64,10 @@ body {
     padding: 16px 48px;
 }
   
+#information img{
+  width:100px;
+  
+}
   /* ================ */
   /*      INDEX       */
   /* ================ */

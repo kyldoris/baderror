@@ -20,9 +20,9 @@
     </form>
     </main>
 
-    <main class="information">
+    <div class="information">
         <h2><b>RECIPES & DETAILS</b></h2>
-    </main>
+    </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 
@@ -50,11 +50,13 @@
                      for (let i = 0; i < recipeInfo.length; i++) {
                        const recipeInfoList = recipeInfo[i];
                           console.log(recipeInfoList)
-     
+                          console.log(recipeInfo[i].recipe.images.SMALL.url)
+
                     $('.information').append(
-                       "<h3>" + recipeInfo[i].recipe.label + "</h3>" +
-                       "<p><img src='" + recipeInfo[i].recipe.image+ "' width='305'></p>"+
-                       "<p>For more info: <a href ='" + recipeInfo[i].recipe.uri + "'>" + recipeInfo[i].hits.url + "</a></p>"
+
+                        "<h3>" + recipeInfo[i].recipe.label + "</h3>" +
+                       "<p><img src='" + recipeInfo[i].recipe.images.THUMBNAIL.url+"'></p>"
+                    //    "<p>For more info: <a href ='" + recipeInfo[i].recipe.url + "'>" + recipeInfo[i].hits.url + "</a></p>"
                     );
                      }
                   },
