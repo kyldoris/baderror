@@ -21,7 +21,7 @@
     </main>
 
     <div class="information">
-        <h2><b>RECIPES & DETAILS</b></h2>
+        <h1><b>RECIPES & DETAILS</b></h1>
     </div>
 
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -43,7 +43,7 @@
      $.ajax(URL).then(
      
          function(json) {
-                    $('.information').html("<h2><b>RECIPES & DETAILS</b></h2><hr>")
+                    $('.information').html("<h1><b>RECIPES & DETAILS</b></h1><hr>")
      
                      const recipeList = [];
                      const recipeInfo =  json.hits;
@@ -53,10 +53,13 @@
                           console.log(recipeInfo[i].recipe.images.SMALL.url)
 
                     $('.information').append(
-
-                        "<h3>" + recipeInfo[i].recipe.label + "</h3>" +
-                       "<p><img src='" + recipeInfo[i].recipe.images.THUMBNAIL.url+"'></p>"
-                    //    "<p>For more info: <a href ='" + recipeInfo[i].recipe.url + "'>" + recipeInfo[i].hits.url + "</a></p>"
+                       "<h2>" + recipeInfo[i].recipe.label + "</h2>" +
+                       "<p><img src='" + recipeInfo[i].recipe.images.REGULAR.url+"''></p>"+
+                       "<p><b><h2>Ingredents:</b></h2><ul><li>" + recipeInfo[i].recipe.ingredientLines[0]+ "</li>" +
+                       "<li>1. " + recipeInfo[i].recipe.ingredientLines[1]+ "</li>" +
+                       "<li>2. " + recipeInfo[i].recipe.ingredientLines[2]+ "</li>" +
+                       "<li>3. " + recipeInfo[i].recipe.ingredientLines[3]+ "</li></ul></p>" +
+                       "<p>For more info: <a href ='" + recipeInfo[i].recipe.url + "'>" + recipeInfo[i].recipe.url + "</a></p><hr>"
                     );
                      }
                   },
@@ -65,14 +68,10 @@
              console.log('Sorry! We broke it! Check back later!')
                     // This time, we do not end up here!
                  }
-       
                 ); 
-             
      };
      
  </script>
-
-
 
 </body>
 

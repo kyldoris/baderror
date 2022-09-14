@@ -11,12 +11,16 @@ body {
   a {
     text-decoration: none;
   }
+  ul{
+    margin-bottom: 0px; 
+    text-align: left;
+  }
   
   /* ================ */
   /*   CONTAINERS     */
   /* ================ */
  
-  main, header, footer {
+  header, footer {
     width: 80%;
     margin: 0 auto;
     padding: 16px 48px;
@@ -26,10 +30,23 @@ body {
     box-shadow: 1px 1px 5px #888;
     display: flex;
     justify-content: space-between;
-    color: #fb8500;
-   
+    color: #fb8500; 
   }
-  
+main, div{
+    width: 80%;
+    margin: 0 auto;
+    padding: 16px 48px;
+    box-sizing: border-box;
+    background: #023047;
+    text-align: center;
+    box-shadow: 1px 1px 5px #888;
+    display: block;
+    justify-content: space-between;
+    color: #fb8500; 
+}
+
+
+
   /* ================ */
   /*      HEADER     */
   /* ================ */
@@ -63,18 +80,14 @@ body {
     width: 90%;
     padding: 16px 48px;
 }
-  
-#information img{
-  width:100px;
-  
-}
+
   /* ================ */
   /*      INDEX       */
   /* ================ */
   ul {
     list-style-type: none;
     padding: 0;
-    margin: 0 0 32em 0;
+    margin: 0 0 0 0;
     font-family: 'Inconsolata', courier;
   }
   li {
