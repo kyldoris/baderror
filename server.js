@@ -3,7 +3,7 @@ const methodOverride = require("method-override")
 require("dotenv").config();
 const app = express();
 const mongoose = require("mongoose");
-
+/////badbabdbabd
 
 // DATABASE CONFIG
 mongoose.connect(process.env.DATABASE_URL)
